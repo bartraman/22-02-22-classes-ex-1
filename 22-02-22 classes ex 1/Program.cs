@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+
 
 namespace _22_02_22_classes_ex_1
 {
@@ -7,12 +9,12 @@ namespace _22_02_22_classes_ex_1
     {
         static void Main(string[] args)
         {
-            Leerling gegevens;
-            ArrayList leerlingen = new ArrayList();
+            //Leerling gegevens;
+            List <Leerling> leerlingen = new List<Leerling>();
             do
             {
                 Console.Clear();
-                gegevens = new Leerling();
+                Leerling gegevens = new Leerling();
                 Console.WriteLine("Wat is de voornaam van de leerling?!");
                 gegevens.VoorNaamLeerling = Console.ReadLine();
 
@@ -28,7 +30,9 @@ namespace _22_02_22_classes_ex_1
             } while (Console.ReadLine().ToUpper().Substring(0, 1) == "J");
             Console.WriteLine($"Welke leerling wilt u tonen? (1 t.e.m {leerlingen.Count})");
             int i = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(leerlingen[i]);
+            Console.WriteLine($"{leerlingen[i].AchterNaamLeerling}");
+
+         
 
 
         }
